@@ -15,14 +15,15 @@ class CleanStrike:
 		for i in range(len(self.chances['input'])):
 			# Alternate chance of player 
 			if i%2 == 0:
-				self.player1.changePlayersPoints(self.chances['input'][i], i)
+				self.player1.changePlayersPoints(self.board, self.chances['input'][i], i)
 			else:
-				self.player2.changePlayersPoints(self.chances['input'][i],i)
+				self.player2.changePlayersPoints(self.board, self.chances['input'][i],i)
 
-			print self.player1.get_points() , self.player2.get_points()
+			print self.player1.get_points() , self.player2.get_points(), self.board.get_black_coins(), self.board.get_red_coins()
 
 			if self.board.get_black_coins() < 0 or self.board.get_red_coins() < 0:
-				return "INVALID INPUT"
+				print "INVALID INPUT"
+				return 0
 
 			 # winning condition for player2
 			if (self.player2.get_points() - self.player1.get_points() > 3) and self.player2.get_points() >= 5:
@@ -34,4 +35,4 @@ class CleanStrike:
 				print("PLAYER1 WON THE MATCH")		
 				return 0
 			if self.board.get_black_coins() == 0 and self.board.get_red_coins() == 0:
-					return "DRAW" 
+				print "DRAW" 
