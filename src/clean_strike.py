@@ -36,3 +36,4 @@ class CleanStrike:
 				return 0
 			if self.board.get_black_coins() == 0 and self.board.get_red_coins() == 0:
 				print "DRAW" 
+		print "DRAW"		

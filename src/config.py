@@ -11,6 +11,22 @@
 # example: [5, "Red"] or [5, "Black"]
 # 6 means blank chance
 # example: [6]
+INPUT_AA = {
+	"input": [
+	[1, "Red"]
+	]
+}
+INPUT_AB = {
+	"input": [
+	[2,"Red","Red"]
+	]
+}
+INPUT_R = {
+	"input": [
+	[2, "Red","Red"]
+	]
+}
+
 INPUT_Q = {
 	"input": [
 		[6],
@@ -22,7 +38,7 @@ INPUT_Q = {
 	]
 }
 
-INPUT_R = {
+INPUT_T = {
 	"input": [
 		[5, "Black"],
 		[5, "Black"],

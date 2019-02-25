@@ -1,7 +1,7 @@
 # import pdb; pdb.set_trace()
 from game import Game
 from player import Player
-from config import INPUT_X, INPUT_Y, INPUT_Z, INPUT_P, INPUT_L,INPUT_Q
+from config import INPUT_X, INPUT_Y, INPUT_Z, INPUT_P, INPUT_L,INPUT_AA
 from clean_strike import CleanStrike
 
 if __name__ == "__main__":
@@ -11,5 +11,5 @@ if __name__ == "__main__":
 	p2 = Player()
 	board = Game()					  # instance of game class
 
-	game = CleanStrike(INPUT_X, p1, p2, board)       
+	game = CleanStrike(INPUT_AA, p1, p2, board)       
 	game.start()					   # call the method "start" of CleanStrike class

@@ -84,12 +84,15 @@ class Player:
 	def multiStrikeScore(self, chance, carrom):
 		self.multiStrike()
 		if chance[1] == "Red" and chance[2] == "Red":
+			self.redStrike()
+			self.redStrike()
+			carrom.set_red_coins(carrom.get_red_coins() - 2)
 			return
 		if chance[1] == "Red":
-			points = self.redStrike()
+			self.redStrike()
 			carrom.set_red_coins(carrom.get_red_coins() - 1)
 		if chance[2] == "Red":
-			points = self.redStrike()
+			self.redStrike()
 			carrom.set_red_coins(carrom.get_red_coins() - 1)
 		if chance[1] == "Black":
 			# points = self.stike()
@@ -99,9 +102,9 @@ class Player:
 			carrom.set_black_coins(carrom.get_black_coins() - 1)
 
 	def strikeScore(self, chance, carrom):
-		self.stike()
+		# self.stike()
 		if chance[1] == "Red":
-			points = redStrike(points)
+			points = self.redStrike()
 			carrom.set_red_coins(carrom.get_red_coins() - 1)
 		else:
 			carrom.set_black_coins(carrom.get_black_coins() - 1);
